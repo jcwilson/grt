@@ -908,7 +908,7 @@ bool ClassificationData::spiltDataIntoKFolds(const UINT K,const bool useStratifi
                 randomIndex = random.getRandomNumberInt(0,numSamples);
 
                 //Swap the indexs
-                SWAP(classData[c][ x ] , classData[c][ randomIndex ]);
+                GRT_SWAP(classData[c][ x ] , classData[c][ randomIndex ]);
             }
         }
 
@@ -933,7 +933,7 @@ bool ClassificationData::spiltDataIntoKFolds(const UINT K,const bool useStratifi
             randomIndex = random.getRandomNumberInt(0,totalNumSamples);
 
             //Swap the indexs
-            SWAP(indexs[ x ] , indexs[ randomIndex ]);
+            GRT_SWAP(indexs[ x ] , indexs[ randomIndex ]);
         }
 
         UINT counter = 0;

@@ -450,7 +450,7 @@ bool MLP::trainOnlineGradientDescentClassification(const RegressionData &trainin
         
         if( randomiseTrainingOrder ){
             for(UINT i=0; i<M; i++){
-                SWAP(indexList[ i ], indexList[ random.getRandomNumberInt(0, M) ]);
+                GRT_SWAP(indexList[ i ], indexList[ random.getRandomNumberInt(0, M) ]);
             }
         }
         

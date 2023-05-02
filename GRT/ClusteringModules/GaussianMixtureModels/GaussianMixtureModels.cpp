@@ -198,7 +198,7 @@ bool GaussianMixtureModels::train_( const UINT numTrainingSamples, const MatrixF
     Vector< UINT > randomIndexs(numTrainingSamples);
     for(UINT i=0; i<numTrainingSamples; i++) randomIndexs[i] = i;
     for(UINT i=0; i<numClusters; i++){
-        SWAP(randomIndexs[ i ],randomIndexs[ random.getRandomNumberInt(0,numTrainingSamples) ]);
+        GRT_SWAP(randomIndexs[ i ],randomIndexs[ random.getRandomNumberInt(0,numTrainingSamples) ]);
     }
     for(UINT k=0; k<numClusters; k++){
         for(UINT n=0; n<numInputDimensions; n++){
@@ -520,7 +520,7 @@ bool GaussianMixtureModels::mstep( const MatrixFloat &data ){
 
 }
 
-inline void GaussianMixtureModels::SWAP(UINT &a,UINT &b){
+inline void GaussianMixtureModels::GRT_SWAP(UINT &a,UINT &b){
 	UINT temp = b;
 	b = a;
 	a = temp;

@@ -741,7 +741,7 @@ TimeSeriesClassificationData TimeSeriesClassificationData::split(const UINT trai
                 randomIndex = random.getRandomNumberInt(0,numSamples);
 
                 //Swap the indexs
-                SWAP( classData[k][ x ] ,classData[k][ randomIndex ] );
+                GRT_SWAP( classData[k][ x ] ,classData[k][ randomIndex ] );
             }
         }
 
@@ -772,7 +772,7 @@ TimeSeriesClassificationData TimeSeriesClassificationData::split(const UINT trai
             randomIndex = random.getRandomNumberInt(0,totalNumSamples);
 
             //Swap the indexs
-            SWAP( indexs[ x ] , indexs[ randomIndex ] );
+            GRT_SWAP( indexs[ x ] , indexs[ randomIndex ] );
         }
 
         //Add the data to the training and test sets
@@ -874,7 +874,7 @@ bool TimeSeriesClassificationData::spiltDataIntoKFolds(const UINT K,const bool u
                 randomIndex = random.getRandomNumberInt(0,numSamples);
 
                 //Swap the indexs
-                SWAP( classData[c][ x ] , classData[c][ randomIndex ] );
+                GRT_SWAP( classData[c][ x ] , classData[c][ randomIndex ] );
             }
         }
 
@@ -899,7 +899,7 @@ bool TimeSeriesClassificationData::spiltDataIntoKFolds(const UINT K,const bool u
             randomIndex = random.getRandomNumberInt(0,totalNumSamples);
 
             //Swap the indexs
-            SWAP( indexs[ x ] , indexs[ randomIndex ] );
+            GRT_SWAP( indexs[ x ] , indexs[ randomIndex ] );
         }
 
         UINT counter = 0;

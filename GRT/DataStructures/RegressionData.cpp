@@ -283,7 +283,7 @@ RegressionData RegressionData::split(const UINT trainingSizePercentage){
 	for(UINT i=0; i<totalNumSamples; i++) indexs[i] = i;
 	for(UINT x=0; x<totalNumSamples; x++){
 		randomIndex = random.getRandomNumberInt(0,totalNumSamples);
-		SWAP( indexs[ x ] , indexs[ randomIndex ] );
+		GRT_SWAP( indexs[ x ] , indexs[ randomIndex ] );
 	}
 
 	//Add the data to the training and test sets
@@ -367,7 +367,7 @@ bool RegressionData::spiltDataIntoKFolds(const UINT K){
         randomIndex = random.getRandomNumberInt(0,totalNumSamples);
 
         //Swap the indexs
-        SWAP( indexs[ x ] , indexs[ randomIndex ] );
+        GRT_SWAP( indexs[ x ] , indexs[ randomIndex ] );
     }
 
     UINT counter = 0;

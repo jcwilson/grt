@@ -185,7 +185,7 @@ protected:
     bool estep( const MatrixFloat &data, VectorDouble &u, VectorDouble &v, Float &change );
 	bool mstep( const MatrixFloat &data );
 	bool computeInvAndDet();
-	inline void SWAP(UINT &a,UINT &b);
+	inline void GRT_SWAP(UINT &a,UINT &b);
 	inline Float SQR(const Float v){ return v*v; }
     
     Float gauss(const VectorDouble &x,const UINT clusterIndex,const VectorDouble &det,const MatrixFloat &mu,const Vector< MatrixFloat > &invSigma){

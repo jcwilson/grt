@@ -442,7 +442,7 @@ UnlabelledData UnlabelledData::split(const UINT trainingSizePercentage){
 		randomIndex = random.getRandomNumberInt(0,totalNumSamples);
 
         //Swap the indexs
-        SWAP( indexs[ x ] , indexs[ randomIndex ] );
+        GRT_SWAP( indexs[ x ] , indexs[ randomIndex ] );
 	}
     
     trainingSet.reserve( numTrainingExamples );
